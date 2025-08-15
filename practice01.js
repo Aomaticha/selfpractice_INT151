@@ -6,7 +6,7 @@ console.log(value[0]) // ดูสมาชิกตัวแรก index เร
 console.log(value[value.length-1]) // return ตัวท้ายออกมาเพราะ index เริ่มที่ 0 ทำให้ตำแหน่งสุดท้ายมีค่าต่ำกว่า length อยู่ 1 เลยต้องลบ 1 เพื่อให้ได้ index ของตัวสุดท้าย
 // ใช้ .push  เพิ่มค่าท้าย object with array 
 value.push({id:53,Name:'Aomati',phone:563938})
-console.log(value)
+console.log(value) 
 value[value.length]=['cake','pepsi',53]  //ใช้แบบนี้ก็ได้เหมือนกันเพราะ .length เป็นค่าท้ายเราก็เอาไปต่อท้าย ถ้าเป็น -1 มันมีค่าอยู่เราก็ต้องเอามันออก
 console.log(value)
 
