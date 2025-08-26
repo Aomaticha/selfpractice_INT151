@@ -1,0 +1,43 @@
+19.08.2025
+//prompt 1 เขียน function รับค่า parameter มา 2 ตัวต้องเป็นตัวเลขและค่าต้องไม่ติดลบให้แสดงเกรดทั้ง 2 ค่าแล้วหาค่าเฉลี่ยของเกรดนั้นถ้าเกรดเฉลี่ยเกิน 3.5 ให้ return Very Good นอกนั้นให้ return Normal
+ข้อนี้ได้ฝึกเขียน function และได้ใช้  typeof ลองเช็ค type ว่าเป็น number มั้ยและใช้  if ในการบอกเงื่อนไข ว่าถ้า grade1 + grade2 แล้วนำมาหาร 2 เพราะมี 2 grade เพื่อหาค่าเฉลี่ย แล้วใส่เครื่องหมาย > 3.5 หมายความว่าถ้าค่าเฉลี่ยออกมาเกิน 3.5 เกรด  = ดีมาก และถ้าต่ำกว่า 3.5 ให้บอกว่า ปกติ
+ข้อนี้หลักๆเลยคือได้ฝึกเขียน function และได้ลอง  typeof และ if ในการเปรียบเทียบและบอกเงื่อนไขต่างๆ
+
+
+20.08.2025
+//prompt 1 ( โจทย์ในห้องที่ทำไม่ได้ )
+//Write a function getFreqOfWords(sentence) that returns an object with keys representing unique words in lowercase and values representing the frequency of occurrences of each word (ignore case) in the sentence.
+//If the input string is null or undefined, return undefined.
+ข้อนี้ให้นับความที่ของคำที่เจอถ้าเจอ 1 คำก็นับ 1 เจอ 2 คำก็นับ 2 เริ่มแรกเราจะเช็คว่า input ที่รับเข้าไปว่าเป็นค่า null หรือ undefined มั้ยถ้าเป็น ให้ return undefined ต่อมาแล้วจะประกาศตัวแปรใหม่เพื่อให้เก็บค่าที่เปลี่ยนแปลง เราจะเปลี่ยนข้อความที่เป็นตัวพิมพ์ใหญ่ให้เป็นพิมพ์เล็กทั้งหมด ก็จะใช้ .toLowerCase() ละใช้ .split เพื่อแยก string ด้วยช่องว่าง กลายเป็น array เพราะจะได้แยกคำออกมาเป็นคำๆ ต่อมาก็สร้าง object ว่างไว้เก็บผลลัพธ์(เก็บเป็น key กับ value) และใน for loop ก็จะวนทีละคำประกาศตัวแปรใน for loop แลเวให้ดึงคำออกมาต่อมาจะใช้ freq[word] = (freq[word] || 0) + 1; ตัวนี้จะบอกว่า freq จะดูว่ามี key "word" อยู่รึยัง ถ้ายังปกติมันจะบอกว่า undefined หรือเรายังไม่ได้กำหนดค่าให้มัน ให้ใช้ || 0 แปลว่าแทนค่าเป็น 0 แทนแล้วถ้าเจอค่อยบวก 1 
+ขอนี้ได้ฝึกเขียน function ได้ฝึกตรวจสอบ เช็ค type ค่า null กับ undefined ด้วยและได้ใช้ method LowerCase() เปลี่ยนค่าจากตัวใหญ่เป็นตัวเล็ก และ .split ได้รู้ว่า .split ใส่ " " สามารถเปลี่ยนค่าจาก string เป็น  array ได้และได้รู้วิธีนับคำแบบ short-circuit ทำให้เขียนโค้ดได้สั้นลงด้วย
+
+//prompt 2 เขียน function countPositive(numbers) ที่รับค่าเป็น array ของตัวเลขนับจำนวนตัวเลขที่ มากกว่า 0 
+// คืนค่าเป็นตัวเลขทั้งหมดว่ามีกี่ตัวที่มากกว่า 0
+ได้ฝึกเขียน function นับตัวเลข เริ่มแรกเราก็จะประกาศตัวแปรให้เก็บค่านับเลข count แล้วใช้  for of เขียน loop ต่อมาในเงื่อนไข if ก็จะบอกว่า ถ้า nums ที่เป็นตัวที่ได้จาก numbers (let nums of numbers) ถ้า nums > 0 ให้นับเพิ่มไปเรื่อยๆแล้วเก็บไว้ที่ count ต่อมาก็ return count ออกมา
+
+
+21.08.2025
+// prompt 1 เขียน function sumArray ที่รับ array ของตัวเลข แล้ว return ผลรวมทั้งหมด
+ข้อนี้ได้ฝึกเขียน function แต่ข้อนี้ได้ลองการเช็ค type ของ array ว่า type ของ array เช็คแบบ Array.isArray() เรื่มด้วยก็จะเช็ค type ของ ค่าที่เราจะเอามาก่อนว่าเป็น array มั้ยถ้าไม่ใช่ให้ return is not array ถ้าใช้ก็มาทำข้างล่างต่อ ประกาศตัวแปร sum เพื่อมาเก็บค่าบวก และใช้ for loop วนแต่ละค่า ใช้ if ใน for loop เช็คว่าถ้า typeof ของค่าที่เราเอามาเป็น number ให้เอามาบวกกันแล้วเก็บไว้ที่ sum สุดท้าย return sum จะได้ค่าตัวเลขใน array ที่บอกกันแล้ว
+
+
+//22.08.2025
+//prompt 1 เขียนฟังก์ชันชื่อ containsNumber ที่รับ array และ number แล้ว return"Found" ถ้ามี number ใน array "Not found" ถ้าไม่มี number อยู่ใน array นั้น
+ข้อนี้ได้ฝึกเขียน function แบบหาว่ามีตัวเลขนั้นอยู่ใน array นั้นมั้ย ก็เริ่มใช้ Array.isArray() เช็คก่อนว่าเป็น array มั้ย  ต่อมาใน for loop ก็จะให้ i วนลูปเหมือนเดิมและไม่ให้เกินความยาวของ array ต่อมาใน if เงื่อนไขว่าถ้า number === array ให้ return Found ถ้านอกเหนือจากนั้น return Not Found
+
+
+//24.08.2025
+//prompt 1 สร้าง class Person , Constructor รับ name  เก็บใน this.name Method getName() → return this.name
+// class Student (extends Person) Constructor รับ name และ studentId → ใช้ super(name) เก็บ name เก็บ studentId ใน this.studentId
+// Method introduce() → return "Hi, my name is <name> and my student ID is <studentId>"
+ข้อนี้ลองเขียน class จากที่เรียนแก้วิชา INT141 มาเลยเอามาฝึกเขียนในวิชานี้ด้วย เริ่มประกาศ class ชื่อ Person รับ constructor มาชื่อ name แล้วให้ใช้ method getname return ค่า name ออกมา ต่อมาประกาศ class Student ให้ extends (คือการรับค่าจาก class Person มาใช้โดยไม่ต้องประกาศค่านั้นใหม่) กับ class Person มี Constructor เป็น name(ของ class Person) และมี studentId ใช้ super เพื่อเรียกใช้ค่าที่เรา extends มาต่อมาก็ให้ method introduce return ว่า `Hi, my name is ${this.name} and my student ID is ${this.studentId}`  ตรง ${this.name},${this.studentId} เป็นการเอาค่า this.name และ ${this.studentId} มาใส่ไว้ใน string ได้เลย ต่อมาก็จะถึงวิธีการสร้าง object เพื่อเรียกใช้ class ก็จะประกาศแบบนี้  let s1 = new Student("Aom", "67130500053"); บอกว่าให้ s1 new ค่า Student ใหม่เป็นตามที่เราเขียนและก็ console.log(s1.introduce()); ตัวหลังก็จะเป็นการบอกว่าเราอยากให้มันทำงานกับ method ไหนก็จุดมันออกมา
+ข้อนี้ได้ฝึกเขียน class และยังได้รู้จักการทำงานของ class ต่างๆว่ามีอะไรบ้างเช่นพวก extends , super ว่ามันคืออะไรและทำงานอย่างไร
+
+//prompt 2 สร้าง class Animal ที่มี property: name และ method: makeSound() สร้าง class Dog ที่สืบทอดจาก Animalเพิ่ม property: breed
+//เพิ่ม method: bark() สร้าง class Cat ที่สืบทอดจาก Animal เพิ่ม property: color เพิ่ม method: meow()
+ข้อนี้ ได้ลองสร้าง class พร้อม method หลายตัว เริ่มที่ method แรกใน class แม่ เราสามารถใช้กับสัตว์ทุกตัว โดยจะใช้ ชื่อสัตว์ ที่ส่งเข้ามาตอนสร้าง object มาใส่ในข้อความที่เรากำหนดต่อมาเป็น method ของ class Dog ใช้เพื่อคืนค่าข้อความว่ามันเห่า (bark) โดย return ข้อความ (ชื่อสุนัข) barks สำหรับ method ของ class Cat ใช้เพื่อคืนค่าข้อความว่าแมวร้อง (meows) โดย return (ชื่อแมว) meows สุดท้ายสร้าง object ของแต่ละ class และใช้ console.log() 
+เพื่อตรวจสอบผลลัพธ์
+ข้อนี้ช่วยให้ฝึกเขียน class และ method หลายตัว และได้ลองใช้ ${this.name} ใน string ให้คล่องมากขึ้น
+
+
+
