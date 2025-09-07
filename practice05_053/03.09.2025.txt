@@ -1,0 +1,30 @@
+//03.09.2025
+//prompt 1 Write a function addProperty(obj, key, value) that adds a new  property to an object and returns the updated object
+ได้ลองเอาโจทย์ที่อาจาร์ยฝึกให้ทำมาเรา เขียน function addProperty(obj,key,value) รับค่ามา 3 อย่างประกาศฟังก์ชั้นเสร็จก็พิมพ์ บรรทัด obj[key] = value; จะเอาค่า value ไปใส่ใน property ชื่อ key ของ obj ก็ได้คืนค่าที่ถูกอัปเดตกลับมา ข้ออนี้ด้ลองฝึกเขียนเรื่องที่เรียนไปแล้ว ให้ถนัดมากขึ้น
+
+//prompt 2 Write a function mergeObject(obj1, obj2) and return merges two objects
+  ข้อนี้ได้ลองฝึกใช้ (...) ฟังก์ชัน mergeObject ใช้ spread operator (...) เพื่อรวม object ทั้งสอง ...obj1  กระจาย property ของ obj1 , obj2 → กระจาย property ของ obj2
+ได้ฝึกเขียน function และ ...(spread)
+
+//prompt 3 Write a function convertToUppercase(arr) that takes an array of strings and returns a new array with all strings converted to uppercase.
+ประกาศ ฟังก์ชันรับ array ของ string ใช้ .map() วนแต่ละค่าใน array และะ a.toUpperCase() แปลงข้อความให้เป็นตัวพิมพ์ใหญ่ทั้งหมดคืนค่าเป็น array ใหม่
+
+
+//04.09.2025
+//prompt 1
+//findMax ได้ฝึกหาค่าสูงสุดใน array โดยการวนลูปเปรียบเทียบ ได้ฝึกการใช้ loop (for...of) เพื่อไล่ค่าทีละตัวและใช้ if-else เพื่อเปรียบเทียบหาค่าที่มากที่สุดได้ฝึกการเข้าถึง array element เข้าถึงได้โดยตรง และเปรียบเทียบได้ทันที
+
+
+//05.09.2025
+//prompt 1
+โจทย์ doubleAndFilterEvenNumbers → ฝึกใช้ filter + map เลือกเฉพาะเลขคู่ แล้วคูณสอง ข้อนี้ได้ฝึกการใช้ array method .filter ที่กรองค่าเฉพาะค่าที่เข้าเงื่อนไข  .map ใช้เปลี่ยนค่าที่กรองเป็นค่าใหม่
+และได้ลองเขียน short function มากขึ้น
+
+
+//06.09.2025
+//prompt 1 Write a function EvenNumbers(arr) that takes an array of numbers and returns a new array with only the even numbers
+ข้อนี้ได้ฝึก การใช้  filter เลขคู่จาก array 
+
+//prompt 2 Write a function populateArray(length, value) that creates an array of given length and fills it with the specified value
+ข้อนี้ได้ลองใช้  ฝึกใช้ Array(length) เพื่อสร้าง array ขึ้นมาตามจำนวนที่กำหนดและใช้ .fill(value) ใส่ค่าเริ่มต้นให้ทุกช่องใน array
+ได้เข้าใจการ สร้าง array ที่มีรูปแบบซ้ำ ๆ และได้ทวนความรู้ที่เคยเรียนไป
